@@ -1,0 +1,300 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --navbar_height: 10%;
+}
+
+/* Navigation Bar */
+#navbar{
+    position: sticky;
+    display: flex;
+    align-items: center;
+    top: 0;
+    z-index: 10;
+    animation: an2 2s ease-in-out 0s 1;
+}
+
+@keyframes an2 {
+    from{
+        
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
+
+/* Navigation Bar : Logo Image */
+#logo{
+    margin: 10px 30px;
+    height: 4.5em;
+    width: 4.5em;
+}
+
+#logo img{
+    border-radius: 5em;
+    margin: 0px 0px;
+    height: 4.5em;
+    width: 4.5em;
+    animation: an3 2s ease-in-out 2s 1;
+}
+
+@keyframes an3 {
+    0%{
+        height: 4.5em;
+        width: 4.5em;
+    }
+    50%{
+        height: 6em;
+        width: 6em;
+        transform: rotate(360deg);
+    }
+    100%{
+        height: 4.5em;
+        width: 4.5em;
+    }
+}
+
+/* Navigation Bar : List */
+#navbar ul{
+    margin-left: 2em;
+    display: flex;
+}
+
+#navbar::before{
+    content: "";
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: black;
+    opacity: 0.6;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+
+#navbar ul li{
+    list-style: none;
+    font-size: 1.1rem;
+}
+
+#navbar ul li a{
+    border-radius: 0.3em;
+    display: block;
+    padding: 1.5rem;
+    text-decoration: none;
+    color: whitesmoke;
+    transition: all 1s ease-in-out 0s;
+}
+
+#navbar ul li input{
+    height: 1.7em;
+    align-self: right;
+    margin-top: 2em;
+    margin-left: 20em;
+}
+
+#navbar ul li button{
+    width: 5em;
+    height: 2em;
+    padding: 0;
+}
+
+#navbar ul li a:hover, #navbar ul .now{
+    border-radius: 0.3em;
+    color: rgb(245, 245, 139);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Home Section */
+#home::before{
+    content: "";
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: url('web_tag_imgs/p6.jpg') no-repeat center center/cover;
+    height: 80%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.8;
+    animation: an1 2s ease-in-out 0s 1 forwards;
+    animation-direction: alternate;
+    transition: all 2s ease-in-out 0s;
+}
+
+@keyframes an1{
+    from{
+        height: 0%;
+    }
+    to{
+        height: 100%;
+    }
+}
+
+
+#home{
+    display: flex;
+    flex-direction: column;
+    padding: 5em 5em;
+    height: 26em;
+}
+
+#home h1{
+    color: rgb(255, 255, 255);
+    /* text-shadow: 0.2em 0.2em 0.2em lightblue; */
+    text-align: center;
+    padding: 0.8em;
+}
+
+#home p{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 1.2rem;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    /* text-shadow: 0.2em 0.2em 0.2em lightblue; */
+    padding: 0.3em;
+}
+
+/* Details Section */
+.details{
+    display: grid;
+    grid-gap: 2em;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+}
+
+.detail_item{
+    padding: 1em;
+    /* border: 2px solid red; */
+    text-align: center;
+}
+
+.detail_text{
+    /* background: plum; */
+    font-size: medium;
+    padding: 3em;
+}
+
+.details img{
+    height: 15em;
+    width: 15em;
+    border-radius: 15em;
+}
+
+/* Login Section */
+
+.login{
+    height: 30em;
+    margin: 2em 0;
+}
+
+.login::before{
+    content: "";
+    background: url("../web_tag_imgs/bg5.jpg") no-repeat center center/cover;
+    position: absolute;
+    height: 32em;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+#login_box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1em;
+    text-align: center;
+}
+
+form{
+    width: 30%;
+}
+
+form label{
+    font-size: 1em;
+    font-weight: bold;
+}
+
+#login_box input, #login_box textarea{
+    width: 100%;
+    padding: 0.3em 1em;
+    margin: 0.2em;
+    text-align: center;
+    border: 0.1em solid black;
+    border-radius: 0.2em;
+    font-size: 0.9em;
+
+}
+
+#login_box input:link, #login_box textarea:link{
+    color: grey;
+    background-color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#login_box input:hover, #login_box textarea:hover, #login_box input:checked, #login_box textarea:checked{
+    color: black;
+    background-color: lightgray;
+}
+
+form .btn{
+    align-self: center;
+    border: 0.1em solid black;
+    color: white;
+    font-size: 1em;
+    border-radius: 1em;
+    background-color: darkslategray;
+    font-family: 'Times New Roman', Times, serif;
+    width: 100%;
+    height: 2em;
+    align-self: center;
+    padding: 0.2em 0.5em;
+    margin: 1em 1em;
+    transition: all 0.5s ease-in-out 0s;
+}
+
+form .btn:hover{
+    cursor: pointer;
+    color: black;
+    border: 0.1em solid black;
+    background-color: rgba(47, 79, 79, 0.315);
+}
+
+/* Footer */
+footer{
+    background-color: black;
+    padding: 0.5em 5em;
+    color: white;
+    font-size: 1em;
+}
+
+/* Utility Classes */
+.h_primary{
+    font-size: 3rem;
+    padding: 0.5em;
+    text-align: center;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.h_secondary{
+    font-size: 2rem;
+    padding: 0.7em;
+    text-align: center;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.btn{
+    padding: 0.2em 0.5em;
+}
+
+.center{
+    align-items: center;
+    text-align: center;
+}

@@ -1,0 +1,224 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --navbar_height: 10%;
+}
+
+/* Navigation Bar */
+#navbar{
+    position: sticky;
+    display: flex;
+    align-items: center;
+    top: 0;
+    z-index: 10;
+}
+
+/* Navigation Bar : Logo Image */
+#logo{
+    margin: 10px 30px;
+    height: 4.5em;
+    width: 4.5em;
+}
+
+#logo img{
+    border-radius: 5em;
+    margin: 0px 0px;
+    height: 4.5em;
+    width: 4.5em;
+    animation: an3 2s ease-in-out 2s 1;
+}
+
+/* Navigation Bar : List */
+#navbar ul{
+    margin-left: 2em;
+    display: flex;
+}
+
+#navbar::before{
+    content: "";
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: black;
+    opacity: 0.6;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+
+#navbar ul li{
+    list-style: none;
+    font-size: 1.1rem;
+}
+
+#navbar ul li a{
+    border-radius: 0.3em;
+    display: block;
+    padding: 1.5rem;
+    text-decoration: none;
+    color: whitesmoke;
+    transition: all 1s ease-in-out 0s;
+}
+
+#navbar ul li input{
+    height: 1.7em;
+    align-self: right;
+    margin-top: 2em;
+    margin-left: 20em;
+}
+
+#navbar ul li button{
+    width: 5em;
+    height: 2em;
+    padding: 0;
+}
+
+#navbar ul li a:hover, #navbar ul .now{
+    border-radius: 0.3em;
+    color: rgb(245, 245, 139);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Home Section */
+#home::before{
+    content: "";
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: url('web_tag_imgs/poems.jpg') no-repeat center center/cover;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.8;
+    animation: an1 2s ease-in-out 0s 1 forwards;
+    animation-direction: alternate;
+    transition: all 5s ease 0s;
+}
+
+@keyframes an1{
+    0%{
+        background: url('web_tag_imgs/poems.jpg') no-repeat center center/cover;
+        opacity: 0.0;
+    }
+    50%{
+        background: url('web_tag_imgs/poems.jpg') no-repeat center center/cover;
+        opacity: 0.5;
+    }
+    100%{
+        background: url('web_tag_imgs/poems.jpg') no-repeat center center/cover;
+    }
+}
+
+
+#home{
+    display: flex;
+    flex-direction: column;
+    padding: 5em 5em;
+    height: 26em;
+}
+
+#home h1{
+    color: black;
+    /* text-shadow: 0.2em 0.2em 0.2em lightblue; */
+    text-align: center;
+    padding: 0.8em;
+}
+
+#home p{
+    color: black;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    /* text-shadow: 0.2em 0.2em 0.2em lightblue; */
+    padding: 0.3em;
+}
+
+#home input{
+    width: 40%;
+    height: 2em;
+    align-self: center;
+    text-align: center;
+}
+
+.end{
+    padding-bottom: 3em;
+    margin-top: -1em;
+    display: grid;
+    grid-gap: 0.2em;
+    background-color: black;
+    grid-column: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.end_head{
+    grid-column: 1/span 5;
+}
+
+.end_item .h_secondary{
+    font-size: large;
+}
+
+.end_item img{
+    margin: -0.5em;
+    margin-right: 0.5em;
+    height: 2em;
+    width: 2em;
+    border-radius: 0.6em;
+}
+
+.end_item img:hover{
+    cursor: pointer;
+    transform: translateY(0.1em);
+}
+
+.end_item{
+    padding: 0.5em;
+    text-align: center;
+    color: white;
+    /* border: 2px solid rgb(255, 0, 0); */
+}
+
+.end_item a{
+    text-decoration: none;
+    color: white;
+}
+
+.end_item a:hover{
+    color: rgb(255, 255, 102);
+}
+
+/* Footer */
+footer{
+    background-color: black;
+    padding: 0.5em 5em;
+    color: white;
+    font-size: 1em;
+}
+
+/* Utility Classes */
+.h_primary{
+    font-size: 3rem;
+    padding: 0.5em;
+    text-align: center;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.h_secondary{
+    font-size: 2rem;
+    padding: 0.7em;
+    text-align: center;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.btn{
+    padding: 0.2em 0.5em;
+}
+
+.center{
+    align-items: center;
+    text-align: center;
+}

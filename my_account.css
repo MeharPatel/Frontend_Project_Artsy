@@ -1,0 +1,324 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --navbar_height: 10%;
+}
+
+body{
+    background-color: rgb(196, 247, 230);
+}
+
+/* Navigation Bar */
+#navbar{
+    position: sticky;
+    display: flex;
+    align-items: center;
+    top: 0;
+    z-index: 10;
+}
+
+/* Navigation Bar : Logo Image */
+#logo{
+    margin: 10px 30px;
+    height: 4.5em;
+    width: 4.5em;
+}
+
+#logo img{
+    border-radius: 5em;
+    margin: 0px 0px;
+    height: 4.5em;
+    width: 4.5em;
+}
+
+/* Navigation Bar : List */
+#navbar ul{
+    margin-left: 2em;
+    display: flex;
+}
+
+#navbar::before{
+    content: "";
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: black;
+    opacity: 0.6;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+
+#navbar ul li{
+    list-style: none;
+    font-size: 1.1rem;
+}
+
+#navbar ul li a{
+    border-radius: 0.3em;
+    display: block;
+    padding: 1.5rem;
+    text-decoration: none;
+    color: whitesmoke;
+    transition: all 1s ease-in-out 0s;
+}
+
+#navbar ul li input{
+    height: 1.7em;
+    align-self: right;
+    margin-top: 2em;
+    margin-left: 20em;
+}
+
+#navbar ul li button{
+    width: 5em;
+    height: 2em;
+    padding: 0;
+}
+
+#navbar ul li a:hover, #navbar ul .now{
+    border-radius: 0.3em;
+    color: rgb(245, 245, 139);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Profile Section */
+#profile::before{
+    content: "";
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: url('web_tag_imgs/bg4.jpg') no-repeat center center/cover;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.8;
+    animation: an1 2s ease-in-out 0s 1 forwards;
+    animation-direction: alternate;
+    transition: all 2s ease 0s;
+}
+
+@keyframes an1{
+    0%{
+        background: url('web_tag_imgs/bg4.jpg') no-repeat center center/cover;
+        opacity: 0.0;
+    }
+    50%{
+        background: url('web_tag_imgs/bg4.jpg') no-repeat center center/cover;
+        opacity: 0.5;
+    }
+    100%{
+        background: url('web_tag_imgs/bg4.jpg') no-repeat center center/cover;
+    }
+}
+
+#profile{
+    flex-direction: column;
+    padding: 0;
+    height: 30em;
+}
+
+#profile h1{
+    color: rgb(5, 0, 0);
+    /* text-shadow: 0.2em 0.2em 0.2em lightblue; */
+    text-align: center;
+    padding: 0.8em;
+}
+
+#profile .dp{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#profile img{
+    width: 20em;
+    height: 20em;
+    border: 2px solid black;
+    border-radius: 15em;
+}
+
+#profile p{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 1.2rem;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    /* text-shadow: 0.2em 0.2em 0.2em lightblue; */
+    padding: 0.3em;
+}
+
+/* Details Section */
+
+.detail{
+    height: 30em;
+    margin: 6em 0;
+}
+
+.detail::before{
+    content: "";
+    position: absolute;
+    height: 32em;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+#detail_box{
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    padding-bottom: 1em;
+    text-align: left;
+}
+
+form{
+    width: 30%;
+}
+
+form label{
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#detail_box input, #detail_box textarea{
+    width: 100%;
+    padding: 0.3em 1em;
+    margin: 0.2em;
+    text-align: center;
+    border: 0.1em solid black;
+    border-radius: 0.2em;
+    font-size: 0.9em;
+
+}
+
+#detail_box input:link, #detail_box textarea:link{
+    color: grey;
+    background-color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#detail_box input:hover, #detail_box textarea:hover, #detail_box input:checked, #detail_box textarea:checked{
+    color: black;
+    background-color: lightgray;
+}
+
+form .btn{
+    align-self: center;
+    border: 0.1em solid black;
+    color: white;
+    font-size: 1em;
+    border-radius: 1em;
+    background-color: darkslategray;
+    font-family: 'Times New Roman', Times, serif;
+    width: 40%;
+    height: 2.5em;
+    align-self: center;
+    padding: 0.2em 0.5em;
+    margin: 1em 1.1em;
+    transition: all 0.5s ease-in-out 0s;
+}
+
+form .btn:hover{
+    cursor: pointer;
+    color: black;
+    border: 0.1em solid black;
+    background-color: rgba(47, 79, 79, 0.315);
+}
+
+/* Wishlist button */
+
+.wishbtn{
+    align-items: right;
+    text-align: right;
+    margin-right: 5em;
+    margin-bottom: 5em;
+    margin-top: -12em;
+}
+
+.wishbtn button{
+    color: black;
+    width: 15%;
+    padding: 1em;
+    background-color: rgba(0, 255, 128, 0.788);
+    border: 1.5px solid black;
+    border-radius: 8px;
+    box-shadow: 1em 0.8em 0.5em grey;
+    transition: all 0.5s ease-in-out 0s;
+}
+
+.wishbtn button:hover{
+    color: black;
+    background-color: rgba(251, 255, 0, 0.466);
+    border: 1.5px solid black;
+}
+
+.wishbtn a{
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+/* About Section */
+.about{
+    margin: 0 7em;
+    margin-bottom: 2em;
+    grid-gap: 1em;
+    display: grid;
+    grid-template-areas: 
+    'head head'
+    'me para';
+}
+
+.about h1{
+    grid-area: head;
+}
+
+.about img{
+    grid-area: me;
+    height: 20em;
+    border-radius: 2em;
+}
+
+.about p{
+    padding: 4em 2em;
+    font-size: large;
+    text-align: center;
+    grid-area: para;
+}
+
+/* Footer */
+footer{
+    background-color: black;
+    padding: 0.5em 5em;
+    color: white;
+    font-size: 1em;
+}
+
+/* Utility Classes */
+.h_primary{
+    font-size: 3rem;
+    padding: 0.5em;
+    text-align: center;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.h_secondary{
+    font-size: 2rem;
+    padding: 0.7em;
+    text-align: center;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.btn{
+    padding: 0.2em 0.5em;
+}
+
+.center{
+    align-items: center;
+    text-align: center;
+}
